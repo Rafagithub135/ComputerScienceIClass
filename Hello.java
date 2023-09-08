@@ -7,4 +7,9 @@ public class Hello {
         System.out.println("");
         System.out.println("Above is an empty line.");
     }
+    public static void two(String[] args) {
+        System.out.println("*****************************************");
+        System.out.println("*This is going to display on the screen.*");
+        System.out.println("*****************************************");
+    }
 }
