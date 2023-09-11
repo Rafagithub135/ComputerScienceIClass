@@ -8,6 +8,7 @@ public class Hello {
         System.out.println("Above is an empty line.");
     }
     public static void two(String[] args) {
+        // This is a comment.  It will not appear on the screen when the program runs.
         System.out.println("*****************************************");
         System.out.println("*This is going to display on the screen.*");
         System.out.println("*****************************************");
