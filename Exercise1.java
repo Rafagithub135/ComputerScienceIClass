@@ -14,5 +14,22 @@ public class Exercise1 {
         System.out.println("3). See the hello world program in the file Hello.java");
         System.out.println("Exercise 1.3");
         System.out.println("1). All of the exercises in 1.3 were completed and fixed.");
+        String message = "Hello!";
+        int hour = 11;
+        int minute = 59;
+        String firstLine = "Hello, again!";
+        System.out.print("The value of firstLine is ");
+        System.out.println(firstLine);
+        System.out.print("The current time is ");
+        System.out.print(hour);
+        System.out.print(":");
+        System.out.print(minute);
+        System.out.println(".");
+        System.out.print("Number of minutes since midnight: ");
+        System.out.println(hour * 60 + minute);
+        System.out.print("Fraction of the hour that has passed: ");
+        System.out.println(minute / 60);
+        System.out.print("Percent of the hour that has passed: ");
+        System.out.println(minute * 100 / 60);
     }
 }
