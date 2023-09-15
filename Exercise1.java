@@ -31,5 +31,43 @@ public class Exercise1 {
         System.out.println(minute / 60);
         System.out.print("Percent of the hour that has passed: ");
         System.out.println(minute * 100 / 60);
+        int year = 2023;
+        double numberGrade = 85.4;
+        char letterGrade = 'B';
+        boolean passed = true;
+        System.out.println("The year is " + year + " and your number grade is " + numberGrade + ".");
+
+        int x;
+        x = 3;
+
+        System.out.println();
+        System.out.println("x is " + x);
+        System.out.println(5 * x - 1);
+
+        x += 4;
+        System.out.println();
+        System.out.println("x is " + x);
+        System.out.println(5 * x - 1);
+
+        x += 5;
+        System.out.println();
+        System.out.println("x is " + x);
+        System.out.println(5 * x - 1);
+
+        x += 6;
+        System.out.println();
+        System.out.println("x is " + x);
+        System.out.println(5 * x - 1);
     }
 }
+/** Student Name
+ CSCI 111 Fall 2023
+ This program prints a song
+
+ 1 byte == 8 bits.
+ 1024 Bytes == KB
+ ~ 1 million Bytes == MB
+ ~ 1 billion Bytes == GigaByte
+ ~ 1 trillion Bytes == TB
+
+ */
