@@ -9,6 +9,5 @@ public class FloatingPointNumbers {
         System.out.println("Fraction of the hour that has passed:  ");
         System.out.println(minute / 60.0);
         System.out.println(pi);
-
     }
 }
