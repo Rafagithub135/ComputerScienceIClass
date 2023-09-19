@@ -8,5 +8,6 @@ public class ByteTalker {
         System.out.println(java.time.LocalDateTime.now());
         System.out.println("What message would you like to encrypt?");
         String message = scanner.nextLine();
+        System.out.println(message);
     }
 }
