@@ -11,20 +11,13 @@ public class Echo {
         line = in.nextLine();
         System.out.println("You also said: " + line);
         int inch;
-        double cm;
-        final double CM_PER_INCH = 2.54;
         System.out.print("How many inches?  ");
         inch = in.nextInt();
-        cm = inch * CM_PER_INCH;
+        double cm;
+//        cm = inch * CM_PER_INCH;
         System.out.print(inch + " in = ");
-        System.out.println(cm + " cm");
-<<<<<<< HEAD
         int feet, inches, remainder = 0;
-=======
-//        double cm;
-        int feet, inches, remainder = 0;
-//        final double CM_PER_INCH = 2.54;
->>>>>>> 69cf2a1951cafad143a8181fc65047a52e861a4a
+        final double CM_PER_INCH = 2.54;
         final int IN_PER_FOOT = 12;
         System.out.print("Exactly how many cm? ");
         cm = in.nextDouble();
