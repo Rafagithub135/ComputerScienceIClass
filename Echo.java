@@ -18,9 +18,13 @@ public class Echo {
         cm = inch * CM_PER_INCH;
         System.out.print(inch + " in = ");
         System.out.println(cm + " cm");
-        double cm;
+<<<<<<< HEAD
         int feet, inches, remainder = 0;
-        final double CM_PER_INCH = 2.54;
+=======
+//        double cm;
+        int feet, inches, remainder = 0;
+//        final double CM_PER_INCH = 2.54;
+>>>>>>> 69cf2a1951cafad143a8181fc65047a52e861a4a
         final int IN_PER_FOOT = 12;
         System.out.print("Exactly how many cm? ");
         cm = in.nextDouble();
