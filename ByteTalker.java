@@ -17,6 +17,8 @@ public class ByteTalker {
         for (int i = 0; i < message.length(); i++) {
             System.out.print(message.charAt(i));
             int randomSelector = selector[(int)(Math.random() * selector.length)];
+            // TODO:  After the selector has been printed, print the number of random characters from the randomCharacters array that corresponds to the current hour or minute.  For example, if the current hour is 3, print 3 characters randomly chosen from the randomCharacters array.  If the current minute is 15, print 15 characters randomly chosen from the randomCharacters array.
+            // TODO:  Then, remove the whitespace from the printed message.
             if (randomSelector == 1) {
                 System.out.print("h");
                 int randomHour = (int)(Math.random() * currentTime.getHour());
@@ -31,14 +33,5 @@ public class ByteTalker {
                 }
             }
         }
-        // TODO: Randomly choose a number from the selector array.  If the number is 1, capture the current hour into a variable called hour.  If the number is 2, capture the current minute into a variable called minute.
-
-        // TODO:  Create a for loop that iterates over the message string.  For each character in the message, print the character, then print "h" if the selector is 1, or print "m" if the selector is 2.
-
-        // TODO:  After the selector has been printed, print the number of characters, from the randomCharacters array that corresponds to the current hour or minute.  For example, if the current hour is 3, print 3 characters randomly chosen from the randomCharacters array.  If the current minute is 15, print 15 characters randomly chosen from the randomCharacters array.
-
-
-
-
     }
 }
