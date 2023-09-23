@@ -26,7 +26,7 @@ public class RalphMcCloskeyAssignment3 {
         System.out.println("Assignment 10:  ");
         int assignment10 = scanner.nextInt();
         int assignmentTotal = ((assignment1 + assignment2 + assignment3 + assignment4 + assignment5 + assignment6 + assignment7 + assignment8 + assignment9 + assignment10) * 5);
-//        System.out.println(assignmentTotal);
+        System.out.println(assignmentTotal);
         System.out.println("Your grade for assignments is:  " + assignmentTotal + "%");
         System.out.println(" ");
         System.out.println("Please enter your grade for the first Midterm as a percentage.  For example, if you received a 90% then enter 0.90.  If you get a 100, enter 1:  ");
