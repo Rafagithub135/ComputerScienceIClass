@@ -30,6 +30,10 @@ public class RalphMcCloskeyAssignment3 {
         System.out.println("Your grade for assignments is:  " + assignmentTotal + "%");
         System.out.println(" ");
         System.out.println("Please enter your grade for the first Midterm as a percentage.  For example, if you received a 90% then enter 0.90.  If you get a 100, enter 1:  ");
+//        System.out.println(assignmentTotal);
+        System.out.println("Your grade for assignments is:  " + assignmentTotal + "%");
+        System.out.println(" ");
+        System.out.println("Please enter your grade for the first Midterm as a percentage.  For example, if you received a 90% then enter 0.90.  If you get a 100, enter 1.0:  ");
         double midterm1 = scanner.nextDouble();
         System.out.println("Please enter your grade for the second Midterm as a percentage as before:  ");
         double midterm2 = scanner.nextDouble();

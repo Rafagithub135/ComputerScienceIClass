@@ -1,4 +1,4 @@
-public class Exercise1 {
+public class ThinkJavaChapter1Exercises {
 
     public static void main(String[] args) {
         System.out.println("Exercise 1.1");
@@ -62,7 +62,6 @@ public class Exercise1 {
 }
 /** Student Name
  CSCI 111 Fall 2023
- This program prints a song
 
  1 byte == 8 bits.
  1024 Bytes == KB
