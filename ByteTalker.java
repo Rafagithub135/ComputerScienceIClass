@@ -13,6 +13,7 @@ public class ByteTalker {
         String[] randomCharacters = {"a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "h", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"};
         // Creates a variable to store the current time.
         LocalDateTime currentTime = LocalDateTime.now();
+        StringBuilder emessage = new StringBuilder();
         // Creates a variable to store just the hour.
         int hour = currentTime.getHour();
         // If statement to make the hour up to 12 characters instead of 24.  I will change this back to 24 for the actual program.
@@ -22,33 +23,34 @@ public class ByteTalker {
         // Creates a variable to store just the minute.
         int minute = currentTime.getMinute();
         // Displays the current time of the message so the encrypted message can be decrypted.
-        System.out.println("The current time is " + hour + ":" + minute);
+        System.out.println(hour + ":" + minute);
         // Creates an array to select either the hour or the minute.
         int[] selector = {1, 2};
         // For loop to print the message and the random characters.
         for (int i = 0; i < message.length(); i++) {
             // Displays a character of the message and then is supposed to display either an "h" or an "m" to indicate whether the random number of characters are related to the hour or the minute.
-            System.out.print(message.charAt(i));
+            emessage.append(message.charAt(i));
             // Creates a variable to randomly select either the hour or the minute.
             int randomSelector = selector[(int) (Math.random() * selector.length)];
             // If statement to print an "h" if the randomSelector is a 1.
             if (randomSelector == 1) {
                 // Actually displays the "h" to indicate that the random characters are related to the hour.
-                System.out.print("h");
+                emessage.append("h");
                 // Creates a for loop to display the random characters.  The number of random characters is equal to the hour.
                 for (int j = 1; j <= hour; j++) {
-                    System.out.print(randomCharacters[(int) (Math.random() * hour)]);
+                    emessage.append(randomCharacters[(int) (Math.random() * hour)]);
                 }
                 // Else statement to print an "m" if the randomSelector is a 2.
             } else {
                 // Actually displays the "m" to indicate that the random characters are related to the minute.
-                System.out.print("m");
+                emessage.append("m");
                 // Creates a for loop to display the random characters.  The number of random characters is equal to the minute.
                 for (int j = 1; j <= minute; j++) {
-                    System.out.print(randomCharacters[(int) (Math.random() * minute)]);
+                    emessage.append(randomCharacters[(int) (Math.random() * minute)]);
                 }
             }
         }
+        // Prints the encrypted message.
+        System.out.println(emessage);
     }
 }
-// TODO:  Then, remove the whitespace from the printed message.
