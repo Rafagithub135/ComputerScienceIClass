@@ -10,16 +10,16 @@ public class ByteTalker {
         // Stores the user's message in the message variable.
         String message = scanner.nextLine();
         // Creates an array of random characters for the program to insert in between each character of the message.
-        String[] randomCharacters = {"a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "h", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"};
+        String[] randomCharacters = {"a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "h", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "_", "=", "{", "}", "[", "]", "/", ">", "?", "<", "~", "`", "|", ";", ":", "'", "\"", "\\"};
         // Creates a variable to store the current time.
         LocalDateTime currentTime = LocalDateTime.now();
         StringBuilder emessage = new StringBuilder();
         // Creates a variable to store just the hour.
         int hour = currentTime.getHour();
         // If statement to make the hour up to 12 characters instead of 24.  I will change this back to 24 for the actual program.
-//        if (currentTime.getHour() > 12) {
-//            hour = currentTime.getHour() - 12;
-//        }
+        //        if (currentTime.getHour() > 12) {
+        //            hour = currentTime.getHour() - 12;
+        //        }
         // Creates a variable to store just the minute.
         int minute = currentTime.getMinute();
         // Displays the current time of the message so the encrypted message can be decrypted.
