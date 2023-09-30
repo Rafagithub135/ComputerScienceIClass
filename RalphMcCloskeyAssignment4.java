@@ -79,11 +79,11 @@ public class RalphMcCloskeyAssignment4 {
         System.out.println(" ");
         String billAsCurrency = formatter.format(subTotal);
         if (orderCorrect.equals("Y")) {
-            System.out.println("Your order has been placed.  Your subtotal is:  $" + subTotal);
+            System.out.println("Your order has been placed.\nYour subtotal is:  $" + subTotal);
             double tax = subTotal * 0.06;
             String taxAsCurrency = formatter.format(tax);
-            System.out.println("Tax:  $" + tax);
-            System.out.println("Total:  $" + (subTotal) + tax);
+            System.out.println("Tax:  $" + String.format("%.2f", tax));
+            System.out.println("Total:  $" + String.format("%.2f", subTotal + tax));
         } else {
             System.out.println("Your order has been cancelled.  Please try again.");
         }
