@@ -88,5 +88,4 @@ public class RalphMcCloskeyAssignment4 {
             System.out.println("Your order has been cancelled.  Please try again.");
         }
     }
-
 }
