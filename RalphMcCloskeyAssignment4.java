@@ -86,6 +86,7 @@ public class RalphMcCloskeyAssignment4 {
             System.out.println("Total:  $" + String.format("%.2f", subTotal + tax));
         } else {
             System.out.println("Your order has been cancelled.  Please try again.");
+            System.exit(0);
         }
     }
 }
