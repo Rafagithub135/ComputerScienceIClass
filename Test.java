@@ -13,18 +13,18 @@ public class Test {
         // Creates an array of random characters for the program to insert in between each character of the message.
         String[] randomCharacters = {"a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "h", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"};
         // SelectorNumbers are extra numbers that will be mixed into the time code to make it harder to crack.
-        Random random = new Random();
         StringBuilder emessage = new StringBuilder();
         // Creates an array to store the random numbers that will be used to encrypt the message.
-        int[] decoder = new int[10];
+        String[] decoder = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
         // Creates a for loop to store the random numbers in the decoder array.
-        for (int i = 0; i <= 10; i++) {
-            decoder[i] = random.nextInt();
+        String randomDecoder = "0";
+        for (int i = 0; i <= 8; i++) {
+            randomDecoder += decoder[(int) (Math.random() * 10)];
         }
         // Displays the decoder array.
-        System.out.println(Arrays.toString(decoder));
-        // Creates an array to select either code 1 or 2.
-        int[] selector = {1, 2};
+        System.out.println(Arrays.toString(randomDecoder.toCharArray()));
+        // Creates an array to select one of 5 pairs of numbers.
+        int[] selector = {1, 2, 3, 4, 5};
         // For loop to print the message and the random characters.
         for (int j = 0; j < message.length(); j++) {
             // Displays a character of the message and then is supposed to display either an "1" or a "2" to indicate whether the random number of characters are related to the first number or the second.
@@ -38,16 +38,16 @@ public class Test {
                 // Creates a for loop to display the random characters.  The number of random characters is equal to the first number.
 //                for (int i = 1; i <= selectorNumbers[4, 5]; i++) {
 //                    emessage.append(randomCharacters[(int) (Math.random() * hour)]);
-                }
-                // Else statement to print an "m" if the randomSelector is a 2.
+            }
+            // Else statement to print an "m" if the randomSelector is a 2.
 //            } else {
-                // Actually displays the "m" to indicate that the random characters are related to the minute.
-                emessage.append("2");
-                // Creates a for loop to display the random characters.  The number of random characters is equal to the minute.
+            // Actually displays the "m" to indicate that the random characters are related to the minute.
+//            emessage.append("2");
+            // Creates a for loop to display the random characters.  The number of random characters is equal to the minute.
 //                for (int j = 1; j <= minute; j++) {
 //                    emessage.append(randomCharacters[(int) (Math.random() * minute)]);
-                }
-            }
+        }
+    }
         }
         // Prints the encrypted message.
 //        System.out.println(emessage);
