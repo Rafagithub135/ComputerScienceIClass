@@ -15,7 +15,7 @@ public class Test {
         // SelectorNumbers are extra numbers that will be mixed into the time code to make it harder to crack.
         StringBuilder emessage = new StringBuilder();
         // Creates an array to store the random numbers that will be used to encrypt the message.
-        String[] decoder = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+        char[] decoder = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
         // Creates a for loop to store the random numbers in the decoder array.
         String randomDecoder = "0";
         for (int i = 0; i <= 8; i++) {
