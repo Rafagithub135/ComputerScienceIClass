@@ -23,7 +23,7 @@ public class ByteTalker {
         // Creates a variable to store just the minute.
         int minute = currentTime.getMinute();
         // Displays the current time of the message so the encrypted message can be decrypted.
-        System.out.println(hour + ":" + minute);
+        System.out.println(hour + " " + minute);
         // Creates an array to select either the hour or the minute.
         int[] selector = {1, 2};
         // For loop to print the message and the random characters.
