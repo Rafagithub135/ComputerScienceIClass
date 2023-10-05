@@ -1,9 +1,9 @@
-// TODO:  1. Take in a message as a string to be encrypted.
-// TODO:  2. Capture that message as in a variable named message.
-// TODO:  3. Insert an array of randomCharacters for encrypting.
-// TODO:  4. Use StringBuilder to move characters from message to a variable named emessage.
-// TODO:  5. Use Random line to create a 9-digit random number.
-// TODO:  6: Create an array of 9 numbers (0 - 8) to indicate the index of the 9-digit number to select. (selector)
+// TODONE:  1. Take in a message as a string to be encrypted.
+// TODONE:  2. Capture that message as in a variable named message.
+// TODONE:  3. Insert an array of randomCharacters for encrypting.
+// TODONE:  4. Use StringBuilder to move characters from message to a variable named emessage.
+// TODONE:  5. Use Random line to create a 9-digit random number.
+// TODONE:  6: Create an array of 9 numbers (0 - 8) to indicate the index of the 9-digit number to select. (selector)
 // TODO:  7: Create a for loop to select numbers from the 9-digit number to count characters to insert and insert the characters into emessage.
 // TODO:  8: Display emessage.
 import java.util.Arrays;
@@ -23,8 +23,17 @@ public class Test {
         int random = (int) (Math.random() * 1000000000);
         System.out.println(random);
         int[] selector = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+        int index1 = 0;
+        for (int i = 0; i < 2; i++) {
+            index1 = (int) (Math.random() * 9);
+        }
+        System.out.println(index1);
+        int index2 = 0;
+        for (int i = 0; i < 2; i++) {
+            index2 = (int) (Math.random() * 9);
+        }
+        System.out.println(index2);
 
-//        for (int i = 0; i < 9; i++) {
 //            int index = (int) (Math.random() * 9);
 //            int number = (int) (random / Math.pow(10, index)) % 10;
 //            int count = 0;
