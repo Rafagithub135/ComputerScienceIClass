@@ -20,19 +20,21 @@ public class Test {
 //        Random r = new Random();
 //        int rand = r.nextInt((int) 100000000, (int) 999999999);
 //        System.out.println(rand);
-        int random = (int) (Math.random() * 1000000000);
+        int random = (int) (Math.random() * 7);
         System.out.println(random);
-        int[] selector = {0, 1, 2, 3, 4, 5, 6, 7, 8};
-        int index1 = 0;
-        for (int i = 0; i < 2; i++) {
-            index1 = (int) (Math.random() * 9);
-        }
-        System.out.println(index1);
-        int index2 = 0;
-        for (int i = 0; i < 2; i++) {
-            index2 = (int) (Math.random() * 9);
-        }
-        System.out.println(index2);
+//        int[] selector = {0, 1, 2, 3, 4, 5, 6, 7, 8};
+//        displayBinary(random);
+        System.out.println(random);
+//        int index1 = 0;
+//        for (int i = 0; i < 2; i++) {
+//            index1 = (int) (Math.random() * 9);
+//        }
+//        System.out.println(index1);
+//        int index2 = 0;
+//        for (int i = 0; i < 2; i++) {
+//            index2 = (int) (Math.random() * 9);
+//        }
+//        System.out.println(index2);
 
 //            int index = (int) (Math.random() * 9);
 //            int number = (int) (random / Math.pow(10, index)) % 10;
@@ -43,5 +45,11 @@ public class Test {
 //            }
 //        }
 //        System.out.println(emessage);
+//        public static void displayBinary ( int random) {
+//            if (random > 0) {
+//                displayBinary(random / 2);
+//                System.out.print(random % 2);
+//            }
+//        }
     }
 }
