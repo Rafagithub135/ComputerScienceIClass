@@ -1,5 +1,7 @@
-import java.util.Scanner;
+// TODO:  You will write an improved restaurant program. You can start by editing your Assignment #4 submission OR you can start from scratch. Your program will allow the user to continue to order as many menu items as they would like. You will do this by incorporating a loop into your program. Just like Assignment #4, your program must include input validation. This means that if the user enters an invalid option, you will let them know.
+
 import java.text.NumberFormat;
+import java.util.Scanner;
 
 public class RalphMcCloskeyAssignment5 {
     public static void main(String[] args) {
@@ -11,84 +13,92 @@ public class RalphMcCloskeyAssignment5 {
         double[] menuFoodPrices = {15.99, 8.99, 6.99, 1.99, 8.99, 13.99, 10.99, 7.99, 10.99, 7.99};
         double[] menuDrinkPrices = {0.00, 4.99, 5.99, 5.99, 1.99, 1.99, .99, 2.99, 2.99, 2.99};
         System.out.println("Welcome to the Philly Steakhouse Restaurant!");
-        System.out.println("Food and Drink Items::");
+        System.out.println("Here is our menu:");
+        System.out.println("Food Items:");
         for (int i = 0; i < menuFoodItems.length; i++) {
             System.out.println(menuFoodItems[i] + " - $" + menuFoodPrices[i]);
         }
+        System.out.println("Drink Items:");
         for (int i = 0; i < menuDrinkItems.length; i++) {
             System.out.println(menuDrinkItems[i] + " - $" + menuDrinkPrices[i]);
         }
-        for (int i = 0; i < menuFoodItems.length; i++) {
-            subTotal = subTotal += menuFoodPrices[i];
-        }
-        System.out.println("Please enter the food item you would like to order:");
-        String orderItem = input.nextLine();
-
-        if (orderItem.equals("Pizza")) {
-            subTotal = subTotal += menuFoodPrices[0];
-        } else if (orderItem.equals("Burger")) {
-            subTotal = subTotal += menuFoodPrices[1];
-        } else if (orderItem.equals("Hot Dog")) {
-            subTotal = subTotal += menuFoodPrices[2];
-        } else if (orderItem.equals("Fries")) {
-            subTotal = subTotal += menuFoodPrices[3];
-        } else if (orderItem.equals("Salad")) {
-            subTotal = subTotal += menuFoodPrices[4];
-        } else if (orderItem.equals("Cheesesteak")) {
-            subTotal = subTotal += menuFoodPrices[5];
-        } else if (orderItem.equals("Chicken Sandwich")) {
-            subTotal = subTotal += menuFoodPrices[6];
-        } else if (orderItem.equals("Chicken Nuggets")) {
-            subTotal = subTotal += menuFoodPrices[7];
-        } else if (orderItem.equals("Pasta")) {
-            subTotal = subTotal += menuFoodPrices[8];
-        } else if (orderItem.equals("Soup")) {
-            subTotal = subTotal += menuFoodPrices[9];
-        } else {
-            System.out.println("You have entered an invalid food item.  Please try again.");
-        }
-        System.out.println(" ");
-        System.out.println("Please enter the drink item you would like to order:");
-        String drinkItem = input.nextLine();
-        if (drinkItem.equals("Water")) {
-            subTotal = subTotal += menuDrinkPrices[0];
-        } else if (drinkItem.equals("Soda")) {
-            subTotal = subTotal += menuDrinkPrices[1];
-        } else if (drinkItem.equals("Beer")) {
-            subTotal = subTotal += menuDrinkPrices[2];
-        } else if (drinkItem.equals("Wine")) {
-            subTotal = subTotal += menuDrinkPrices[3];
-        } else if (drinkItem.equals("Coffee")) {
-            subTotal = subTotal += menuDrinkPrices[4];
-        } else if (drinkItem.equals("Tea")) {
-            subTotal = subTotal += menuDrinkPrices[5];
-        } else if (drinkItem.equals("Milk")) {
-            subTotal = subTotal += menuDrinkPrices[6];
-        } else if (drinkItem.equals("Juice")) {
-            subTotal = subTotal += menuDrinkPrices[7];
-        } else if (drinkItem.equals("Lemonade")) {
-            subTotal = subTotal += menuDrinkPrices[8];
-        } else if (drinkItem.equals("Iced Tea")) {
-            subTotal = subTotal += menuDrinkPrices[9];
-        } else {
-            System.out.println("You have entered an invalid drink item.  Please try again later.");
-            System.exit(0);
-        }
         System.out.println(" ");
         System.out.println("What would you like to order?");
-        System.out.println("You have ordered " + orderItem + " and " + drinkItem + ".  Is this order correct? (Y/N)");
-        String orderCorrect = input.next();
-        System.out.println(" ");
-        String billAsCurrency = formatter.format(subTotal);
-        if (orderCorrect.equals("Y")) {
-            System.out.println("Your order has been placed.\nYour subtotal is:  $" + subTotal);
-            double tax = subTotal * 0.06;
-            String taxAsCurrency = formatter.format(tax);
-            System.out.println("Tax:  $" + String.format("%.2f", tax));
-            System.out.println("Total:  $" + String.format("%.2f", subTotal + tax));
-        } else {
-            System.out.println("Your order has been cancelled.  Please try again.");
-            System.exit(0);
+        String order = input.nextLine();
+        switch (order) {
+            case "Pizza":
+                subTotal += menuFoodPrices[0];
+                break;
+            case "Burger":
+                subTotal += menuFoodPrices[1];
+                break;
+            case "Hot Dog":
+                subTotal += menuFoodPrices[2];
+                break;
+            case "Fries":
+                subTotal += menuFoodPrices[3];
+                break;
+            case "Salad":
+                subTotal += menuFoodPrices[4];
+                break;
+            case "Cheesesteak":
+                subTotal += menuFoodPrices[5];
+                break;
+            case "Chicken Sandwich":
+                subTotal += menuFoodPrices[6];
+                break;
+            case "Chicken Nuggets":
+                subTotal += menuFoodPrices[7];
+                break;
+            case "Pasta":
+                subTotal += menuFoodPrices[8];
+                break;
+            case "Soup":
+                subTotal += menuFoodPrices[9];
+                break;
+            case "Water":
+                subTotal += menuDrinkPrices[0];
+                break;
+            case "Soda":
+                subTotal += menuDrinkPrices[1];
+                break;
+            case "Beer":
+                subTotal += menuDrinkPrices[2];
+                break;
+            case "Wine":
+                subTotal += menuDrinkPrices[3];
+                break;
+            case "Coffee":
+                subTotal += menuDrinkPrices[4];
+                break;
+            case "Tea":
+                subTotal += menuDrinkPrices[5];
+                break;
+            case "Milk":
+                subTotal += menuDrinkPrices[6];
+                break;
+            case "Juice":
+                subTotal += menuDrinkPrices[7];
+                break;
+            case "Lemonade":
+                subTotal += menuDrinkPrices[8];
+                break;
+            case "Iced Tea":
+                subTotal += menuDrinkPrices[9];
+                break;
+        }
+                System.out.println("Would you like to order another item? (Y/N)");
+                String orderAgain = input.nextLine();
+                if (orderAgain.equalsIgnoreCase("Y")) {
+                    System.out.println("What would you like to order?");
+                    order = input.nextLine();
+                } else if (orderAgain.equalsIgnoreCase("N")) {
+                    System.out.println(" ");
+                    System.out.println("Your total is " + formatter.format(subTotal) + ".");
+                    System.out.println("Thank you for your order!");
+                    System.exit(0);
+                } else {
+                    System.out.println("Invalid option. Please try again.");
+                }
         }
     }
-}
