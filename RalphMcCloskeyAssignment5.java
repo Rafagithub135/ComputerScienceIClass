@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class RalphMcCloskeyAssignment5 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        NumberFormat formatter = NumberFormat.getCurrencyInstance();
         double subTotal = 0;
         String[] menuItems = {"Pizza", "Burger", "Hot Dog", "Fries", "Salad", "Cheesesteak", "Chicken Sandwich", "Chicken Nuggets", "Pasta", "Soup", "Water", "Soda", "Beer", "Wine", "Coffee", "Tea", "Milk", "Juice", "Lemonade", "Iced Tea"};
         double[] menuPrices = {15.99, 8.99, 6.99, 1.99, 8.99, 13.99, 10.99, 7.99, 10.99, 7.99, 0.00, 4.99, 5.99, 5.99, 1.99, 1.99, .99, 2.99, 2.99, 2.99};
@@ -87,12 +86,16 @@ public class RalphMcCloskeyAssignment5 {
                     order = input.nextLine();
                     break;
             }
-            double tax = subTotal * .06;
-            String taxAsCurrency = formatter.format(tax);
-            String totalAsCurrency = formatter.format(subTotal + tax);
-            System.out.println("Your subtotal is:      $" + String.format("%.2f", subTotal));
-            System.out.println("Your tax is:            " + taxAsCurrency);
-            System.out.println("Your total bill is:    " + totalAsCurrency);
+            printTotals(subTotal);
         }
+    }
+    public static void printTotals (double subTotal) {
+        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+        double tax = subTotal * .06;
+        String taxAsCurrency = formatter.format(tax);
+        String totalAsCurrency = formatter.format(subTotal + tax);
+        System.out.println("Your subtotal is:      $" + String.format("%.2f", subTotal));
+        System.out.println("Your tax is:            " + taxAsCurrency);
+        System.out.println("Your total bill is:    " + totalAsCurrency);
     }
 }
