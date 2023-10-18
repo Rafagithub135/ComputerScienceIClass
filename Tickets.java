@@ -5,11 +5,11 @@ public class Tickets {
         Scanner input = new Scanner(System.in);
         int tickets = input.nextInt();
         if (tickets == 1) {
-            System.out.println("You ordered 1 ticket.");
+            System.out.println("Your price is $25.");
         } else if (tickets == 2) {
-            System.out.println("You ordered 2 tickets.");
+            System.out.println("Your price is $50.");
         } else if (tickets == 3) {
-            System.out.println("You ordered 3 tickets.");
+            System.out.println("Your price is $75.");
         } else {
             System.out.println("You can only order 1, 2, or 3 tickets.");
         }
