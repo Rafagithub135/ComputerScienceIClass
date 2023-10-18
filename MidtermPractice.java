@@ -5,6 +5,6 @@ public class MidtermPractice {
         System.out.println("What is your name?");
         Scanner input = new Scanner(System.in);
         String name = input.nextLine();
-        System.out.println(name);
+        System.out.println("Your name is " + name);
     }
 }
