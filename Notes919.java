@@ -24,6 +24,8 @@ public class Notes919 {
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
         System.out.println("The sum of your numbers is " + (num1 + num2) + ".");
-
+        System.out.println("What number would you like to square?");
+        int num3 = scanner.nextInt();
+        System.out.println("The square of " + num3 + " is " + (num3 * num3) + ".");
     }
 }
