@@ -1,6 +1,7 @@
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
+
 public class ByteTalker {
     public static void main(String[] args) {
         // Creates the scanner object.
@@ -10,7 +11,7 @@ public class ByteTalker {
         // Stores the user's message in the message variable.
         String message = scanner.nextLine();
         // Creates an array of random characters for the program to insert in between each character of the message.
-        String[] randomCharacters = {"a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "h", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "_", "=", "{", "}", "[", "]", "/", ">", "?", "<", "~", "`", "|", ";", ":", "'", "\"", "\\"};
+        String[] randomCharacters = {"a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "H", "i", "I", "j", "J", "k", "K", "l", "L", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "_", "=", "{", "}", "[", "]", "/", ">", "?", "<", "~", "`", "|", ";", ":", "'", "\"", "\\"};
         // Creates a variable to store the current time.
         LocalDateTime currentTime = LocalDateTime.now();
         StringBuilder emessage = new StringBuilder();
@@ -52,5 +53,18 @@ public class ByteTalker {
         }
         // Prints the encrypted message.
         System.out.println(emessage);
+        decrypt();
+    }
+    public static void decrypt() {
+        Scanner rennacs = new Scanner(System.in);
+        System.out.println("What message would you like to decrypt?");
+        // Stores encripted message in the message variable.
+        String messageClear = rennacs.nextLine();
+        System.out.println(messageClear.charAt(0));
+//        for (int i = 1; i < messageClear.length; i++) {
+//            if (messageClear.charAt(i) === "h") {
+//                replace(messageClear.charAt(i), "");
+//            }
+//        }
     }
 }
