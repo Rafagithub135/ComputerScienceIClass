@@ -17,7 +17,7 @@ public class ByteTalker {
         StringBuilder emessage = new StringBuilder();
         // Creates a variable to store just the hour.
         int hour = currentTime.getHour();
-        // If statement to make the hour up to 12 characters instead of 24.  I will change this back to 24 for the actual program.
+        // If statement to make the hour up to 12 hours instead of 24.  I will change this back to 24 for the actual program.
         //        if (currentTime.getHour() > 12) {
         //            hour = currentTime.getHour() - 12;
         //        }
