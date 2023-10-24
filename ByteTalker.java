@@ -1,7 +1,6 @@
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-
 public class ByteTalker {
     public static void main(String[] args) {
         // Creates the scanner object.
