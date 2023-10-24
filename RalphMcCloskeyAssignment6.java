@@ -6,30 +6,29 @@ public class RalphMcCloskeyAssignment6 {
         String fileName = "numbers.txt";
         File f = new File(fileName);
         Scanner input = new Scanner(f);
-        int min = 0;
-        int max = 0;
         int sum = 0;
-        int average = 0;
         int count = 0;
+        int max = 0;
+        int min = 100;
+        double average;
         while (input.hasNext()) {
-            System.out.println(input.next());
-            sum += input.nextInt();
-            if (input.nextInt() > max) {
-                max = input.nextInt();
-            }
-            do min = input.nextInt();
-            while (input.nextInt() < min); {
-                min = input.nextInt();
-            }
-            if (count > 0) {
-                average = sum / count;
-            }
+            int num = input.nextInt();
+            sum += num;
             count++;
-            System.out.println("The total is:  " + sum);
-            System.out.println("The minimum number is:  " + min);
-            System.out.println("The maximum number is:  " + max);
-            System.out.println("The average number is:  " + average);
-            System.out.println("The total count is:  " + count);
+            if (max < num) {
+                max = num;
+            }
+            if (num < min) {
+                min = num;
+            }
         }
+        PrintWriter output = new PrintWriter("output.txt");
+        output.println("The sum of all the numbers is:  " + sum);
+        output.println("The total number of iterations (count) is:  " + count);
+        output.println("The biggest number is:  " + max);
+        output.println("The smallest number is:  " + min);
+        output.println(average = (double) sum / count);
+        output.println("The average of all the numbers is:  " + average);
+        output.close();
     }
 }
