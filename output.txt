@@ -2,5 +2,4 @@ The sum of all the numbers is:  315
 The total number of iterations (count) is:  10
 The biggest number is:  78
 The smallest number is:  4
-31.5
 The average of all the numbers is:  31.5

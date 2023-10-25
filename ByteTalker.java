@@ -1,8 +1,9 @@
 import java.time.LocalDateTime;
 import java.util.*;
+import java.io.*;
 
 public class ByteTalker {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         // Creates the scanner object.
         Scanner scanner = new Scanner(System.in);
         // Prompts the user to enter a message to encrypt.
@@ -13,7 +14,6 @@ public class ByteTalker {
         String[] randomCharacters = {"a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "H", "i", "I", "j", "J", "k", "K", "l", "L", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "_", "=", "{", "}", "[", "]", "/", ">", "?", "<", "~", "`", "|", ";", ":", "'", "\"", "\\"};
         // Creates a variable to store the current time.
         LocalDateTime currentTime = LocalDateTime.now();
-        StringBuilder emessage = new StringBuilder();
         // Creates a variable to store just the hour.
         int hour = currentTime.getHour();
         // If statement to make the hour up to 12 characters instead of 24.  I will change this back to 24 for the actual program.
@@ -23,7 +23,8 @@ public class ByteTalker {
         // Creates a variable to store just the minute.
         int minute = currentTime.getMinute();
         // Displays the current time of the message so the encrypted message can be decrypted.
-        System.out.println(hour + " " + minute);
+        System.out.println(minute + " " + hour);
+        StringBuilder emessage = new StringBuilder();
         // Creates an array to select either the hour or the minute.
         int[] selector = {1, 2};
         // For loop to print the message and the random characters.
@@ -50,20 +51,23 @@ public class ByteTalker {
                 }
             }
         }
+        PrintWriter output = new PrintWriter("encrypted.txt");
+//        output.println(message);
+        output.println(minute + " " + hour);
+        output.println(emessage);
+        output.close();
         // Prints the encrypted message.
         System.out.println(emessage);
         decrypt();
     }
-    public static void decrypt() {
-        Scanner rennacs = new Scanner(System.in);
-        System.out.println("What message would you like to decrypt?");
-        // Stores encripted message in the message variable.
-        String messageClear = rennacs.nextLine();
-        System.out.println(messageClear.charAt(0));
-//        for (int i = 1; i < messageClear.length; i++) {
-//            if (messageClear.charAt(i) === "h") {
-//                replace(messageClear.charAt(i), "");
-//            }
-//        }
+
+    public static void decrypt() throws FileNotFoundException {
+        String fileName = "encrypted.txt";
+        File f = new File(fileName);
+        Scanner rennacs = new Scanner(f);
+        while (rennacs.hasNext()) {
+            int minute = rennacs.nextInt();
+            int hour = rennacs.nextInt();
+        }
     }
 }
