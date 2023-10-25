@@ -27,7 +27,7 @@ public class RalphMcCloskeyAssignment6 {
         output.println("The total number of iterations (count) is:  " + count);
         output.println("The biggest number is:  " + max);
         output.println("The smallest number is:  " + min);
-        output.println(average = (double) sum / count);
+        average = (double) sum / count;
         output.println("The average of all the numbers is:  " + average);
         output.close();
     }
