@@ -25,10 +25,11 @@ public class Test {
         }
         String word = null;
         while (rennacs.hasNext()) {
+            String emessage = rennacs.next();
             StringBuilder output = new StringBuilder();
             for (int i = 0; i < output.length(); i++) {
-                output.append(output.charAt(0));
-                System.out.print(output);
+                output.append(emessage.charAt(0));
+                System.out.print(emessage);
             }
         }
     }
