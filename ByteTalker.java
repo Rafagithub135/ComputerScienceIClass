@@ -58,16 +58,5 @@ public class ByteTalker {
         output.close();
         // Prints the encrypted message.
         System.out.println(emessage);
-        decrypt();
-    }
-
-    public static void decrypt() throws FileNotFoundException {
-        String fileName = "encrypted.txt";
-        File f = new File(fileName);
-        Scanner rennacs = new Scanner(f);
-        while (rennacs.hasNext()) {
-            int minute = rennacs.nextInt();
-            int hour = rennacs.nextInt();
-        }
     }
 }
