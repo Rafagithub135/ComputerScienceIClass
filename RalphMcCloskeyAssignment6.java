@@ -9,8 +9,15 @@ public class RalphMcCloskeyAssignment6 {
         int sum = 0;
         int count = 0;
         int max = 0;
-        int min = 100;
+        int min = 0;
         double average;
+        if (input.hasNextInt()) {
+            int num = input.nextInt();
+            sum += num;
+            count++;
+            max = num;
+            min = num;
+        }
         while (input.hasNext()) {
             int num = input.nextInt();
             sum += num;
@@ -21,6 +28,7 @@ public class RalphMcCloskeyAssignment6 {
             if (num < min) {
                 min = num;
             }
+            System.out.println(sum);
         }
         PrintWriter output = new PrintWriter("output.txt");
         output.println("The sum of all the numbers is:  " + sum);
@@ -28,7 +36,7 @@ public class RalphMcCloskeyAssignment6 {
         output.println("The biggest number is:  " + max);
         output.println("The smallest number is:  " + min);
         average = (double) sum / count;
-        output.println("The average of all the numbers is:  " + average);
+        output.print("The average of all the numbers is:  " + average);
         output.close();
     }
 }
