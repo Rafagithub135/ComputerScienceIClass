@@ -28,7 +28,6 @@ public class RalphMcCloskeyAssignment6 {
             if (num < min) {
                 min = num;
             }
-            System.out.println(sum);
         }
         PrintWriter output = new PrintWriter("output.txt");
         output.println("The sum of all the numbers is:  " + sum);
