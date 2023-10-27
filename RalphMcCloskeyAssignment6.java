@@ -35,7 +35,7 @@ public class RalphMcCloskeyAssignment6 {
         output.println("The biggest number is:  " + max);
         output.println("The smallest number is:  " + min);
         average = (double) sum / count;
-        output.print("The average of all the numbers is:  " + average);
+        output.printf("The average of all the numbers is:  " + "%.4f", average);
         output.close();
     }
 }
