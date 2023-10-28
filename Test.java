@@ -23,8 +23,9 @@ public class Test {
         int count = 1;
         while (rennacs.hasNext()) {
             String decodedMessage = rennacs.next();
+            System.out.println("Decoded message " + count + ": " + decodedMessage);
             PrintWriter output = new PrintWriter("decrypted.txt");
-            output.println("Message " + count + ":  " + decodedMessage);
+            output.println("Decoded message " + count + ": " + decodedMessage);
             output.close();
             count++;
         }
