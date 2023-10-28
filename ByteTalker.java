@@ -16,6 +16,10 @@ public class ByteTalker {
         LocalDateTime currentTime = LocalDateTime.now();
         // Creates a variable to store just the hour.
         int hour = currentTime.getHour();
+        // If statement to change midnight from 0 to 24 so the encrypted message will be longer.
+        if (hour == 0) {
+            hour = 24;
+        }
         // If statement to make the hour up to 12 characters instead of 24.  I will change this back to 24 for the actual program.
         //        if (currentTime.getHour() > 12) {
         //            hour = currentTime.getHour() - 12;
