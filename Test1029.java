@@ -1,9 +1,8 @@
 import java.time.LocalDateTime;
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
 
-public class ByteTalker {
-    public static void main(String[] args) throws FileNotFoundException {
+public class Test1029 {
+    public static void main(String[] args) {
         // Creates the scanner object.
         Scanner scanner = new Scanner(System.in);
         // Prompts the user to enter a message to encrypt.
@@ -20,10 +19,6 @@ public class ByteTalker {
         if (hour == 0) {
             hour = 24;
         }
-        // If statement to make the hour up to 12 characters instead of 24.  I will change this back to 24 for the actual program.
-        //        if (currentTime.getHour() > 12) {
-        //            hour = currentTime.getHour() - 12;
-        //        }
         // Creates a variable to store just the minute.
         int minute = currentTime.getMinute();
         // Displays the current time of the message so the encrypted message can be decrypted.
@@ -55,11 +50,17 @@ public class ByteTalker {
                 }
             }
         }
-        PrintWriter output = new PrintWriter("encrypted.txt");
-        output.println(minute + " " + hour);
-        output.println(emessage);
-        output.close();
-        // Prints the encrypted message.
         System.out.println(emessage);
+//        for (int j = 0; j < emessage.length(); j++) {
+//            System.out.println(emessage.charAt(j));
+//            if (emessage.charAt(j) == "h") {
+//                emessage.replace(j, j, "");
+//                emessage.replace(j, j + hour, "");
+//            }
+//            if (emessage.charAt(j) == "m") {
+//                emessage.replace(j, j, "");
+//                emessage.replace(j, j + minute, "");
+//            }
+        }
     }
-}
+//}
