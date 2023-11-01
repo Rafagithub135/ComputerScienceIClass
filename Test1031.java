@@ -6,6 +6,7 @@ public class Test1031 {
         Scanner test = new Scanner(System.in);
         System.out.println("Enter the numbers you want to calculate:  ");
         while (test.hasNextInt()) {
+            int looper = 1;
             int number = test.nextInt();
             PrintWriter output = new PrintWriter("calculations.txt");
             output.println(number);
