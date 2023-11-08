@@ -1,39 +1,78 @@
 import java.util.*;
+import java.io.*;
 
 public class RalphMcCloskeyAssignment8 {
     public static void main(String[] args) {
         Scanner shape = new Scanner(System.in);
-        System.out.println("Which shape would you like the area for?");
-        System.out.println("Please enter rectangle, triangle or circle.");
-        String shapeType = shape.nextLine();
-        if (shapeType.equalsIgnoreCase("rectangle")) {
-            System.out.println("The area of the rectangle is:  " + areaRectangle());
-        } else if (shapeType.equalsIgnoreCase("triangle")) {
-            System.out.println("The area of the triangle is:  " + areaTriangle());
-        } else if (shapeType.equalsIgnoreCase("circle")) {
-            System.out.println("The area of the circle is:  " + areaCircle());
+        System.out.println("Would you like to find the area of a shape?");
+        String answer = shape.nextLine();
+        while (answer.equalsIgnoreCase("Y")) {
+            System.out.println("Please enter the shape you would like to find the area of or Done to quit:  ");
+            String option = shape.nextLine();
+            switch (option.toLowerCase()) {
+                case "rectangle":
+                    System.out.println("The area of the rectangle is " + areaRectangle());
+                    break;
+                case "triangle":
+                    System.out.println("The area of the triangle is " + areaTriangle());
+                    break;
+                case "circle":
+                    System.out.println("The area of the circle is " + areaCircle());
+                    break;
+                case "square":
+                    System.out.println("The area of the square is " + areaSquare());
+                    break;
+                case "trapezoid":
+                    System.out.println("The area of the trapezoid is " + areaTrapezoid());
+                    break;
+                case "done":
+                    System.out.println("Thank you for using the area calculator.");
+                    System.exit(0);
+                default:
+                    System.out.println("Please enter a another shape.");
+            }
         }
     }
-    public static int areaRectangle() {
+
+    public static double areaRectangle() {
         Scanner rectangle = new Scanner(System.in);
         System.out.println("Please enter the length of the rectangle:  ");
-        int length = rectangle.nextInt();
+        double length = rectangle.nextDouble();
         System.out.println("Please enter the width of the rectangle:  ");
-        int width = rectangle.nextInt();
+        double width = rectangle.nextDouble();
         return length * width;
     }
-    public static int areaTriangle() {
+
+    public static double areaTriangle() {
         Scanner triangle = new Scanner(System.in);
         System.out.println("Please enter the base of the triangle:  ");
-        int base = triangle.nextInt();
+        double base = triangle.nextDouble();
         System.out.println("PLease enter the height of the triangle:  ");
-        int height = triangle.nextInt();
+        double height = triangle.nextDouble();
         return (base * height) / 2;
     }
+
     public static double areaCircle() {
         Scanner circle = new Scanner(System.in);
         System.out.println("Please enter the radius of the circle:  ");
-        int radius = circle.nextInt();
+        double radius = circle.nextDouble();
         return Math.PI * (radius * radius);
+    }
+
+    public static double areaSquare() {
+        Scanner square = new Scanner(System.in);
+        System.out.println("Please enter the side distance of the square:  ");
+        double side = square.nextDouble();
+        return side * side;
+    }
+    public static double areaTrapezoid() {
+        Scanner trapezoid = new Scanner(System.in);
+        System.out.println("Please enter the length of the first base of the trapezoid:  ");
+        double base1 = trapezoid.nextDouble();
+        System.out.println("Please enter the length of the second base of the trapezoid:  ");
+        double base2 = trapezoid.nextDouble();
+        System.out.println("Please enter the height of the trapezoid:  ");
+        double height = trapezoid.nextDouble();
+        return ((base1 + base2) / 2) * height;
     }
 }

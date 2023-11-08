@@ -1,0 +1,19 @@
+Square
+side = 10
+
+Rectangle
+length = 5
+width = 10
+
+Triangle
+base = 3
+height = 4
+hypotenuse = 5
+
+Circle
+radius = 5
+
+Trapezoid
+base1 = 5
+base2 = 10
+height = 5
