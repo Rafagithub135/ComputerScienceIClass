@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class RalphMcCloskeyAssignment8 {
+public class AreaCalculator {
     public static void main(String[] args) {
         Scanner shape = new Scanner(System.in);
         System.out.println("Would you like to find the area of a shape?");
