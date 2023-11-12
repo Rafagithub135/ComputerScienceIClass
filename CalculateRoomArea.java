@@ -12,19 +12,15 @@ public class CalculateRoomArea {
             switch (option.toLowerCase()) {
                 case "rectangle":
                     area += areaRectangle();
-                    System.out.println("The area of the rectangle is " + areaRectangle());
                     break;
                 case "square":
                     area += areaSquare();
-                    System.out.println("The area of the square is " + areaSquare());
                     break;
                 case "triangle":
                     area += areaTriangle();
-                    System.out.println("The area of the triangle is " + areaTriangle());
                     break;
                 case "circle":
                     area += areaCircle();
-                    System.out.println("The area of the circle is " + areaCircle());
                     break;
                 case "done":
                     System.out.println("Thank you for using the area calculator.");
