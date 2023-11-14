@@ -27,7 +27,7 @@ public class CalculateRoomArea {
                     System.out.println("The total area of the room is " + area);
                     System.exit(0);
                 default:
-                    System.out.println("Please enter a another shape.");
+                    System.out.println("Please enter another shape.");
             }
 
         }
