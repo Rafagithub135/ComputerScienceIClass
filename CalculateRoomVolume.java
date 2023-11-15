@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.*;
 
 public class CalculateRoomVolume {
     public static void main(String[] args) {
@@ -21,11 +21,40 @@ public class CalculateRoomVolume {
                     break;
                 case "done":
                     System.out.println("Thank you for using the volume calculator.");
-                    System.out.println("The total volume of the room is " volume);
+                    System.out.println("The total volume of the room is " + volume);
                     System.exit(0);
                 default:
                     System.out.println("Please enter another shape.");
             }
         }
+    }
+    public static double volumeCube() {
+        Scanner cube = new Scanner(System.in);
+        System.out.println("Please enter the length of the cube: ");
+        double length = cube.nextDouble();
+        System.out.println("Please enter the width of the cube: ");
+        double width = cube.nextDouble();
+        System.out.println("Please enter the height of the cube: ");
+        double height = cube.nextDouble();
+        double volume = length * width * height;
+        return volume;
+    }
+    public static double volumePyramid() {
+        Scanner pyramid = new Scanner(System.in);
+        System.out.println("Please enter the length of the pyramid: ");
+        double length = pyramid.nextDouble();
+        System.out.println("Please enter the width of the pyramid: ");
+        double width = pyramid.nextDouble();
+        System.out.println("Please enter the height of the pyramid: ");
+        double height = pyramid.nextDouble();
+        double volume = (length * width * height) / 3;
+        return volume;
+    }
+    public static double volumeSphere() {
+        Scanner sphere = new Scanner(System.in);
+        System.out.println("Please enter the radius of the sphere: ");
+        double radius = sphere.nextDouble();
+        double volume = (4 * Math.PI * Math.pow(radius, 3)) / 3;
+        return volume;
     }
 }
