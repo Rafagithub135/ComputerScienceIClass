@@ -41,13 +41,13 @@ public class RalphMcCloskeyAssignment3 {
         double finalExam = scanner.nextDouble();
         System.out.println(" ");
         System.out.println("Your total grade for all of your assignments is:  " + assignmentTotal + "%");
-        System.out.println("Your first Midterm grade is:  " + midterm1 * 100 + "%");
-        System.out.println("Your second Midterm grade is:  " + midterm2 * 100 + "%");
-        System.out.println("Your Final Exam grade is:  " + finalExam * 100 + "%");
+        System.out.println("Your first Midterm grade is:  " + midterm1 + "%");
+        System.out.println("Your second Midterm grade is:  " + midterm2 + "%");
+        System.out.println("Your Final Exam grade is:  " + finalExam + "%");
 //        System.out.println((assignmentTotal * 0.2));
 //        System.out.println((midterm1 * 0.25 * 100));
 //        System.out.println((midterm2 * 0.25 * 100));
 //        System.out.println((finalExam * 0.3 * 100));
-        System.out.println("Your Final Total Grade for this class is:  " + ((assignmentTotal * 0.2) + (midterm1 * 0.25 * 100) + (midterm2 * 0.25 * 100) + (finalExam * 0.3 * 100)) + "%");
+        System.out.println("Your Final Total Grade for this class is:  " + ((assignmentTotal * 0.2) + (midterm1 * 0.25) + (midterm2 * 0.25) + (finalExam * 0.3)) + "%");
     }
 }
