@@ -1,0 +1,32 @@
+TOTAL TESTS COMPLETED: 10
+
+TEST NUMBER 1: Customer Count = 33
+Filled Orders = 26, Unfulfilled Orders = 7, Revenue = $686.50
+
+TEST NUMBER 2: Customer Count = 49
+Filled Orders = 31, Unfulfilled Orders = 18, Revenue = $733.50
+
+TEST NUMBER 3: Customer Count = 26
+Filled Orders = 22, Unfulfilled Orders = 4, Revenue = $599.00
+
+TEST NUMBER 4: Customer Count = 41
+Filled Orders = 29, Unfulfilled Orders = 12, Revenue = $737.50
+
+TEST NUMBER 5: Customer Count = 36
+Filled Orders = 25, Unfulfilled Orders = 11, Revenue = $620.00
+
+TEST NUMBER 6: Customer Count = 17
+Filled Orders = 17, Unfulfilled Orders = 0, Revenue = $459.50
+
+TEST NUMBER 7: Customer Count = 8
+Filled Orders = 8, Unfulfilled Orders = 0, Revenue = $213.50
+
+TEST NUMBER 8: Customer Count = 19
+Filled Orders = 19, Unfulfilled Orders = 0, Revenue = $504.00
+
+TEST NUMBER 9: Customer Count = 45
+Filled Orders = 32, Unfulfilled Orders = 13, Revenue = $743.50
+
+TEST NUMBER 10: Customer Count = 8
+Filled Orders = 8, Unfulfilled Orders = 0, Revenue = $216.00
+
