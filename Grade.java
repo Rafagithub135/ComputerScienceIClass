@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Grade {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -15,39 +14,41 @@ public class Grade {
         int assignment4 = scanner.nextInt();
         System.out.println("Assignment 5:  ");
         int assignment5 = scanner.nextInt();
-//        System.out.println("Assignment 6:  ");
-//        int assignment6 = scanner.nextInt();
+        System.out.println("Assignment 6:  ");
+        int assignment6 = scanner.nextInt();
 //        System.out.println("Assignment 7:  ");
 //        int assignment7 = scanner.nextInt();
-//        System.out.println("Assignment 8:  ");
-//        int assignment8 = scanner.nextInt();
-//        System.out.println("Assignment 9:  ");
-//        int assignment9 = scanner.nextInt();
+        System.out.println("Assignment 8:  ");
+        int assignment8 = scanner.nextInt();
+        System.out.println("Assignment 9:  ");
+        int assignment9 = scanner.nextInt();
 //        System.out.println("Assignment 10:  ");
 //        int assignment10 = scanner.nextInt();
-        int assignmentTotal = ((assignment1 + assignment2 + assignment3 + assignment4 + assignment5) * 5); //+ assignment6 + assignment7 + assignment8 + assignment9 + assignment10) * 5);
+        int assignmentTotal = (assignment1 + assignment2 + assignment3 + assignment4 + assignment5 + assignment6 + assignment8 + assignment9);  // assignment7 +  + assignment10) * 5);
+        System.out.println("How many assignments have been assigned so far?  ");
+        int numAssignments = scanner.nextInt();
         System.out.println(assignmentTotal);
-        System.out.println("Your grade for assignments is:  " + assignmentTotal + "%");
+        double assignmentGrade = (double) assignmentTotal / (numAssignments * 2) * 100;
+        System.out.println("Your grade for assignments is:  " + assignmentTotal / (numAssignments * 2) * 100 + "%");
         System.out.println(" ");
         System.out.println("Please enter your grade for the first Midterm as a percentage:  ");
-        System.out.println("Your grade for assignments is:  " + assignmentTotal + "%");
-        System.out.println(" ");
-        System.out.println("Please enter your grade for the first Midterm as a percentage:  ");
+        int midterm1Points = 32;
         double midterm1 = scanner.nextDouble();
-//        System.out.println("Please enter your grade for the second Midterm as a percentage:  ");
-//        double midterm2 = scanner.nextDouble();
+        System.out.println("Please enter your grade for the second Midterm as a percentage:  ");
+        int midterm2Points = 41;
+        double midterm2 = scanner.nextDouble();
 //        System.out.println("Please enter your grade from your Final Exam:  ");
 //        double finalExam = scanner.nextDouble();
         System.out.println(" ");
-        System.out.println("Your total grade for all of your assignments is:  " + assignmentTotal + "%");
+        System.out.println("Your total grade for all of your assignments is:  " + assignmentTotal / (numAssignments * 2) * 100 + "%");
         System.out.println("Your first Midterm grade is:  " + midterm1 + "%");
-//        System.out.println("Your second Midterm grade is:  " + midterm2 + "%");
+        System.out.println("Your second Midterm grade is:  " + midterm2 + "%");
 //        System.out.println("Your Final Exam grade is:  " + finalExam + "%");
-        System.out.println((assignmentTotal * 0.2));
+        System.out.println((assignmentGrade * 0.2));
         System.out.println((midterm1 * 0.25));
-//        System.out.println((midterm2 * 0.25));
+        System.out.println((midterm2 * 0.25));
 //        System.out.println((finalExam * 0.3));
-        System.out.println("Total possible points available to this point:  35");
-        System.out.println("Your Final Total Grade for this class is:  " + ((assignmentTotal * 0.2) + (midterm1 * 0.25)) / 35 + "%.");  // + (midterm2 * 0.25) + (finalExam * 0.3)) + "%");
+        System.out.println("Total possible points available to this point:  " + (numAssignments * 2) + midterm1Points + midterm2Points + ".");
+        System.out.println("Your Final Total Grade for this class is:  " + (((assignmentTotal  / (numAssignments * 2) * 100) * .2) + (midterm1 * 0.25)) + (midterm2 * .25) + 30  + "%.");
     }
 }
