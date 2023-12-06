@@ -15,7 +15,7 @@ public class StJohnPOSMain {
     public static void main(String[] args) throws IOException {
 //Scanner and PrintWriter tools
         Scanner scan = new Scanner(System.in);
-        PrintWriter printer = new PrintWriter(new File("output.txt"));
+        PrintWriter printer = new PrintWriter(new File("stjohnsales.txt"));
 //User decides the number of tests that will occur
         System.out.println("Enter number of tests: ");
         int numTests = scan.nextInt();

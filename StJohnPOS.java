@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+
 /**
  * This class implements a Food Truck with the following menu:
  * - Coffee
@@ -14,19 +15,31 @@ public class StJohnPOS {
      * unchanged for any instance of the FoodTruck class
      */
 // Beginning inventory of menu items
-    private static final int COFFEE_STARTING_INVENTORY = 200;
-    private static final int SODA_STARTING_INVENTORY = 75;
-    private static final int BAGEL_STARTING_INVENTORY = 40;
-    private static final int SANDWICH_STARTING_INVENTORY = 75;
-    private static final int CHIPS_STARTING_INVENTORY = 75;
+    private static final int BUDWEISER_CANS_STARTING_INVENTORY = 30;
+    private static final int MILLER_LITE_CANS_STARTING_INVENTORY = 30;
+    private static final int MILLER_LITE_BOTTLES_STARTING_INVENTORY = 60;
+    private static final int COORS_LIGHT_CANS_STARTING_INVENTORY = 75;
+    private static final int COORS_LIGHT_BOTTLES_STARTING_INVENTORY = 75;
+    private static final int CORONA_BOTTLES_STARTING_INVENTORY = 30;
+    private static final int HEINEKEN_BOTTLES_STARTING_INVENTORY = 30;
+    private static final int ANGRY_ORCHARD_BOTTLES_STARTING_INVENTORY = 30;
+    private static final int ANGRY_ORCHARD_CANS_STARTING_INVENTORY = 0;
+    private static final int TWISTED_TEA_BOTTLES_STARTING_INVENTORY = 24;
+    private static final int YUENGLING_STARTING_INVENTORY = 10;
     // Menu item prices
-    public static final double COFFEE_PRICE = 2;
-    public static final double SODA_PRICE = 1.5;
-    public static final double BAGEL_PRICE = 3;
-    public static final double SANDWICH_PRICE = 8;
-    public static final double CHIPS_PRICE = 2;
+    public static final double BUDWEISER_PRICE = 2.5;
+    public static final double MILLER_LITE_CANS_PRICE = 2.5;
+    public static final double MILLER_LITE_BOTTLES_PRICE = 3;
+    public static final double COORS_LIGHT_CANS_PRICE = 2.5;
+    public static final double COORS_LIGHT_BOTTLES_PRICE = 3;
+    public static final double CORONA_BOTTLES_PRICE = 3.5;
+    public static final double HEINEKEN_BOTTLES_PRICE = 3.5;
+    public static final double ANGRY_ORCHARD_BOTTLES_PRICE = 4;
+    public static final double ANGRY_ORCHARD_CANS_PRICE = 3;
+    public static final double TWISTED_TEA_BOTTLES_PRICE = 3.5;
+    public static final double YUENGLING_PRICE = 3;
     // Tax rate
-    public static final double TAXRATE = 0.06;
+    public static final double TAXRATE = 0.00;
     // Currency formatter
     private static final NumberFormat FORMATTER =
             NumberFormat.getCurrencyInstance();
@@ -38,11 +51,17 @@ public class StJohnPOS {
      * throughout the life of the instance.
      */
 // Remaining inventory
-    private int coffeesRemaining;
-    private int sodasRemaining;
-    private int bagelsRemaining;
-    private int sandwichesRemaining;
-    private int chipsRemaining;
+    private int budweiserRemaining;
+    private int millerLiteCansRemaining;
+    private int millerLiteBottlesRemaining;
+    private int coorsLightCansRemaining;
+    private int coorsLightBottlesRemaining;
+    private int corona_bottlesRemaining;
+    private int heineken_bottlesRemaining;
+    private int angryOrchardBottlesRemaining;
+    private int angryOrchardCansRemaining;
+    private int twistedTeaBottlesRemaining;
+    private int yuenglingRemaining;
     // Order counters
     private int fulfilledOrders;
     private int unfulfilledOrders;
@@ -53,11 +72,17 @@ public class StJohnPOS {
      * Constructor
      */
     public StJohnPOS() {
-        coffeesRemaining = COFFEE_STARTING_INVENTORY;
-        sodasRemaining = SODA_STARTING_INVENTORY;
-        bagelsRemaining = BAGEL_STARTING_INVENTORY;
-        sandwichesRemaining = SANDWICH_STARTING_INVENTORY;
-        chipsRemaining = CHIPS_STARTING_INVENTORY;
+        budweiserRemaining = BUDWEISER_CANS_STARTING_INVENTORY;
+        millerLiteCansRemaining = MILLER_LITE_CANS_STARTING_INVENTORY;
+        millerLiteBottlesRemaining = MILLER_LITE_BOTTLES_STARTING_INVENTORY;
+        coorsLightCansRemaining = COORS_LIGHT_CANS_STARTING_INVENTORY;
+        coorsLightBottlesRemaining = COORS_LIGHT_BOTTLES_STARTING_INVENTORY;
+        corona_bottlesRemaining = CORONA_BOTTLES_STARTING_INVENTORY;
+        heineken_bottlesRemaining = HEINEKEN_BOTTLES_STARTING_INVENTORY;
+        angryOrchardBottlesRemaining = ANGRY_ORCHARD_BOTTLES_STARTING_INVENTORY;
+        angryOrchardCansRemaining = ANGRY_ORCHARD_CANS_STARTING_INVENTORY;
+        twistedTeaBottlesRemaining = TWISTED_TEA_BOTTLES_STARTING_INVENTORY;
+        yuenglingRemaining = YUENGLING_STARTING_INVENTORY;
         unfulfilledOrders = 0;
         fulfilledOrders = 0;
     }
@@ -75,18 +100,24 @@ public class StJohnPOS {
     }
 
     //TO DO: Implement this method
-    public void order(int numCoffees, int numSodas, int numBagels,
-                      int numSandwiches, int numChips) {
-        if (numCoffees > coffeesRemaining || numSodas > sodasRemaining || numBagels > bagelsRemaining || numSandwiches > sandwichesRemaining || numChips > chipsRemaining) {
-            unfulfilledOrders++;
-        } else {
-            coffeesRemaining -= numCoffees;
-            sodasRemaining -= numSodas;
-            bagelsRemaining -= numBagels;
-            sandwichesRemaining -= numSandwiches;
-            chipsRemaining -= numChips;
-            fulfilledOrders++;
-            revenue += (numCoffees * COFFEE_PRICE) + (numSodas * SODA_PRICE) + (numBagels * BAGEL_PRICE) + (numSandwiches * SANDWICH_PRICE) + (numChips * CHIPS_PRICE);
+//    public void order(int numBudweiser, int numMillerLiteCans, int numMillerLiteBottles,
+//                      int numCoorsLightCans, int numCoorsLightBottles, int numCoronaBottles, numHeinekenBottles, numAngryOrchardBottles, numAngryOrchardCans, numTwistedTeaBottles, numYuengling) {
+//        if (numBudweiser > budweiserRemaining || numMillerLiteCans > millerLiteCansRemaining || numMillerLiteBottles > millerLiteBottlesRemaining || numCoorsLightCans > coorsLightCansRemaining || numCoorsLightBottles > coorsLightBottlesRemaining || numCoronaBottles > corona_bottlesRemaining || numHeinekenBottles > heineken_bottlesRemaining || numAngryOrchardBottles > angryOrchardBottlesRemaining || numAngryOrchardCans > angryOrchardCansRemaining || numTwistedTeaBottles > twistedTeaBottlesRemaining || numYuengling > yuenglingRemaining) {
+//            unfulfilledOrders++;
+//        } else {
+//            budweiserRemaining -= numBudweiser;
+//            millerLiteCansRemaining -= numMillerLiteCans;
+//            millerLiteBottlesRemaining -= numMillerLiteBottles;
+//            coorsLightCansRemaining -= numCoorsLightCans;
+//            coorsLightBottlesRemaining -= numCoorsLightBottles;
+//            corona_bottlesRemaining -= numCoronaBottles;
+//            heineken_bottlesRemaining -= numHeinekenBottles;
+//            angryOrchardBottlesRemaining -= numAngryOrchardBottles;
+//            angryOrchardCansRemaining -= numAngryOrchardCans;
+//            twistedTeaBottlesRemaining -= numTwistedTeaBottles;
+//            yuenglingRemaining -= numYuengling;
+//            fulfilledOrders++;
+//            revenue += (numBudweiser * BUDWEISER_PRICE) + (numMillerLiteCans * MILLER_LITE_CANS_PRICE) + (numMillerLiteBottles * MILLER_LITE_BOTTLES_PRICE) + (numCoorsLightCans * COORS_LIGHT_CANS_PRICE) + (numCoorsLightBottles * COORS_LIGHT_BOTTLES_PRICE) + (numCoronaBottles * CORONA_BOTTLES_PRICE) + (numHeinekenBottles * HEINEKEN_BOTTLES_PRICE) + (numAngryOrchardBottles * ANGRY_ORCHARD_BOTTLES_PRICE) + (numAngryOrchardCans * ANGRY_ORCHARD_CANS_PRICE) + (numTwistedTeaBottles * TWISTED_TEA_BOTTLES_PRICE) + (numYuengling * YUENGLING_PRICE);
         }
 
 // This method will:
@@ -99,7 +130,7 @@ public class StJohnPOS {
 // - IF there is not sufficient inventory to fulfill order:
 // - increment the unfulfilledOrders field
 // - leave remaining inventory and revenue unchanged
-    }
+//    }
 
     /**
      * Static Methods:
@@ -108,36 +139,47 @@ public class StJohnPOS {
      * and externally in client code.
      */
 // This method will return a formatted String representing a receipt.
-    public static String formatReceipt(double subtotal) {
-        double tax = subtotal * TAXRATE;
-        double total = subtotal + tax;
-        int space = 12;
-        return String.format("%-" + space + "s", "Subtotal:") +
-                FORMATTER.format(subtotal) + "\n" +
-                String.format("%-" + space + "s", "Tax:") + FORMATTER.format(tax) +
-                "\n" +
-                String.format("%-" + space + "s", "Total:") +
-                FORMATTER.format(total) + "\n";
-    }
-
-    //This method will return a message stating the order cannot be fulfilled.
-    public static String declineOrderMessage() {
-        return "Unfortunately, we cannot fulfill your order. " +
-                "\nHave a nice day!";
-    }
-
-    //This method will return the menu
-    public static String menu() {
-        int space = 12;
-        return String.format("%-" + space + "s", "Coffee:") +
-                FORMATTER.format(COFFEE_PRICE) + "\n" +
-                String.format("%-" + space + "s", "Soda:") +
-                FORMATTER.format(SODA_PRICE) + "\n" +
-                String.format("%-" + space + "s", "Bagel:") +
-                FORMATTER.format(BAGEL_PRICE) + "\n" +
-                String.format("%-" + space + "s", "Sandwich:") +
-                FORMATTER.format(SANDWICH_PRICE) + "\n" +
-                String.format("%-" + space + "s", "Chips:") +
-                FORMATTER.format(CHIPS_PRICE) + "\n";
-    }
-}
+//    public static String formatReceipt(double subtotal) {
+//        double tax = subtotal * TAXRATE;
+//        double total = subtotal + tax;
+//        int space = 12;
+//        return String.format("%-" + space + "s", "Subtotal:") +
+//                FORMATTER.format(subtotal) + "\n" +
+//                String.format("%-" + space + "s", "Tax:") + FORMATTER.format(tax) +
+//                "\n" +
+//                String.format("%-" + space + "s", "Total:") +
+//                FORMATTER.format(total) + "\n";
+//    }
+//
+//    //This method will return a message stating the order cannot be fulfilled.
+//    public static String declineOrderMessage() {
+//        return "Unfortunately, we cannot fulfill your order. " +
+//                "\nHave a nice day!";
+//    }
+//
+//    //This method will return the menu
+//    public static String menu() {
+//        int space = 12;
+//        return String.format("%-" + space + "s", "Budweiser Can:") +
+//                FORMATTER.format(BUDWEISER_PRICE) + "\n" +
+//                String.format("%-" + space + "s", "Miller Lite Can:") +
+//                FORMATTER.format(MILLER_LITE_CANS_PRICE) + "\n" +
+//                String.format("%-" + space + "s", "Miller Lite Bottle:") +
+//                FORMATTER.format(MILLER_LITE_BOTTLES_PRICE) + "\n" +
+//                String.format("%-" + space + "s", "Coors Light Can:") +
+//                FORMATTER.format(COORS_LIGHT_CANS_PRICE) + "\n" +
+//                String.format("%-" + space + "s", "Coors Light Bottle:") +
+//                FORMATTER.format(COORS_LIGHT_BOTTLES_PRICE) + "\n";
+//                String.format("%-" + space + "s", "Corona:") +
+//                FORMATTER.format(CORONA_BOTTLES_PRICE) + "\n";
+//                String.format("%-" + space + "s", "Heineken:") +
+//                FORMATTER.format(HEINEKEN_BOTTLES_PRICE) + "\n";
+//                String.format("%-" + space + "s", "Angry Orchard Bottle:") +
+//                FORMATTER.format(ANGRY_ORCHARD_BOTTLES_PRICE) + "\n";
+//                String.format("%-" + space + "s", "Angry Orchard Can:") +
+//                FORMATTER.format(ANGRY_ORCHARD_CANS_PRICE) + "\n";
+//                String.format("%-" + space + "s", "Twisted Tea:") +
+//                FORMATTER.format(TWISTED_TEA_BOTTLES_PRICE) + "\n";
+//                String.format("%-" + space + "s", "Yuengling:") +
+//                FORMATTER.format(YUENGLING_PRICE) + "\n";
+//    }
