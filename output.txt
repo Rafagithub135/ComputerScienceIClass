@@ -1,26 +1,5 @@
-TOTAL TESTS COMPLETED: 8
-
-TEST NUMBER 1: Customer Count = 47
-Filled Orders = 35, Unfulfilled Orders = 12, Revenue = $753.50
-
-TEST NUMBER 2: Customer Count = 31
-Filled Orders = 28, Unfulfilled Orders = 3, Revenue = $745.50
-
-TEST NUMBER 3: Customer Count = 33
-Filled Orders = 29, Unfulfilled Orders = 4, Revenue = $709.00
-
-TEST NUMBER 4: Customer Count = 12
-Filled Orders = 12, Unfulfilled Orders = 0, Revenue = $322.00
-
-TEST NUMBER 5: Customer Count = 18
-Filled Orders = 18, Unfulfilled Orders = 0, Revenue = $391.50
-
-TEST NUMBER 6: Customer Count = 33
-Filled Orders = 24, Unfulfilled Orders = 9, Revenue = $521.50
-
-TEST NUMBER 7: Customer Count = 29
-Filled Orders = 20, Unfulfilled Orders = 9, Revenue = $513.00
-
-TEST NUMBER 8: Customer Count = 35
-Filled Orders = 31, Unfulfilled Orders = 4, Revenue = $738.00
-
+The sum of all the numbers is:  8763578
+The total number of iterations (count) is:  31
+The biggest number is:  8752381
+The smallest number is:  -8509
+The average of all the numbers is:  282696.0645
