@@ -37,5 +37,10 @@ public class RalphMcCloskeyAssignment6 {
         average = (double) sum / count;
         output.printf("The average of all the numbers is:  " + "%.4f", average);
         output.close();
+        System.out.println("The sum of all the numbers is:  " + sum);
+        System.out.println("The total number of iterations (count) is:  " + count);
+        System.out.println("The biggest number is:  " + max);
+        System.out.println("The smallest number is:  " + min);
+        System.out.printf("The average of all the numbers is: " + "%.2f", average);
     }
 }
