@@ -1,5 +1,5 @@
-The sum of all the numbers is:  8763578
-The total number of iterations (count) is:  31
-The biggest number is:  8752381
+The sum of all the numbers is:  11197
+The total number of iterations (count) is:  30
+The biggest number is:  12354
 The smallest number is:  -8509
-The average of all the numbers is:  282696.0645
+The average of all the numbers is:  373.2333
